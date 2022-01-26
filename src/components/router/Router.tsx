@@ -14,7 +14,7 @@ function Layout() {
   return (
     <div>
       <Header />
-      
+
       <Outlet />
     </div>
   );
@@ -36,6 +36,10 @@ const InnerRouter = () => {
       children: [
         {
           index: true,
+          element: <IndexScreen />,
+        },
+        {
+          path: '/tournaments',
           element: <IndexScreen />,
         },
         {
