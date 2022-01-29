@@ -1,17 +1,31 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Head } from '~/components/shared/Head';
 import cod from '~/components/util/cod';
 
+import { useEffect } from 'react';
+
+
 function Beta() {
-
- useEffect(()=> {
-    async function fetchAccount() {
-      const client = await cod()
-      await client.Identity()
-    }
-
-    fetchAccount();
+  useEffect(()=> {
+    console.log('Useeffect');
+    console.log(cod('gerroy@gerroy.nl', '14124232aA!'));
   },[])
+
+// const config = {
+//   method: 'get',
+//   url: 'https://my.callofduty.com/api/papi-client/codfriends/v1/compendium',
+//   headers: {
+//   }
+// };
+
+// useEffect(() => {
+//   // GET request using axios with set headers
+//   axios.get('https://my.callofduty.com/api/papi-client/codfriends/v1/compendium', {
+//     headers: {
+//     }
+//   })
+//       .then(response => console.log(response));
+// },[])
 
 
   return (
